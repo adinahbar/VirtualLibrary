@@ -30,7 +30,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/id_text_view"
-                android:id="@+id/id_text_view"
+                android:id="@+id/id_text_view_log_in"
                 android:layout_gravity="bottom" />
 
             <EditText
@@ -38,7 +38,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="number"
                 android:ems="10"
-                android:id="@+id/enter_id"
+                android:id="@+id/enter_id_log_in"
                 android:layout_weight="1"
                 android:layout_gravity="bottom" />
 
@@ -55,14 +55,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/privilege_text_view"
-                android:id="@+id/privilege_text_view"
+                android:id="@+id/privilege_text_view_log_in"
                 android:layout_weight="1"
                 android:layout_gravity="left|center|right" />
 
             <Spinner
                 android:layout_width="221dp"
                 android:layout_height="52dp"
-                android:id="@+id/privilege_spinner"
+                android:id="@+id/privilege_spinner_log_in"
                 android:layout_gravity="center"
                 android:layout_weight="1.09" />
 
@@ -80,7 +80,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/log_in"
-            android:id="@+id/logInButton"
+            android:id="@+id/logInButton_log_in"
             android:layout_gravity="center" />
     </LinearLayout>
 </LinearLayout>

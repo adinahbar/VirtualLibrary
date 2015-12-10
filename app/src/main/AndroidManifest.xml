@@ -53,6 +53,11 @@
             android:label="@string/title_activity_book_list_by_category"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
+        <activity
+            android:name=".UpdateCustomer"
+            android:label="@string/title_activity_update_customer"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
     </application>
 
 </manifest>

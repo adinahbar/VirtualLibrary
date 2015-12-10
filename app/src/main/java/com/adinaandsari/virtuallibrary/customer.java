@@ -19,12 +19,16 @@ import java.util.Locale;
 
 import entities.Book;
 import entities.Category;
+import entities.Customer;
 import model.backend.Backend;
 
 public class customer extends AppCompatActivity {
     private Spinner spinner;
     private String[] categoryList;
     private ArrayAdapter<String> dataAdapter;
+    //this customer
+    Intent preIntent = getIntent();
+    Customer user = (Customer) preIntent.getSerializableExtra(ConstValue.CUSTOMER_KEY);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

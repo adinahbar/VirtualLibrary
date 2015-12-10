@@ -5,6 +5,9 @@ import java.util.Date;
  * Created by adina_000 on 05-Nov-15.
  */
 public class Customer extends Person implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
     /**
      * attributes
      */

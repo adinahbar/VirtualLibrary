@@ -33,20 +33,20 @@ public class log_in extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        Spinner spinner = (Spinner) findViewById(R.id.privilege_spinner);
+        Spinner spinner = (Spinner) findViewById(R.id.privilege_spinner_log_in);
         String[] privilegeList = getResources().getStringArray(R.array.privilege_array);
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,R.layout.support_simple_spinner_dropdown_item,privilegeList);
         spinner.setAdapter(dataAdapter);
 
         //log in button
-        Button button = (Button)findViewById(R.id.logInButton);
+        Button button = (Button)findViewById(R.id.logInButton_log_in);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //get the values
-                EditText editTextOfID = (EditText)findViewById(R.id.enter_id);
+                EditText editTextOfID = (EditText)findViewById(R.id.enter_id_log_in);
                 long id = Long.parseLong(editTextOfID.getText().toString());
-                Spinner spinnerPrivilege = (Spinner)findViewById(R.id.privilege_spinner);
+                Spinner spinnerPrivilege = (Spinner)findViewById(R.id.privilege_spinner_log_in);
                 String privilege = spinnerPrivilege.getSelectedItem().toString();
                 Backend backendFactory = model.datasource.BackendFactory.getInstance();
                 boolean found = false;
@@ -59,15 +59,15 @@ public class log_in extends AppCompatActivity {
                             if (c.getNumID()==id)
                             {
                                 found = true;
+                                Intent intent = new Intent(log_in.this, customer.class);
+                                intent.putExtra(ConstValue.CUSTOMER_KEY, c);//add the specific customer
+                                startActivity(intent);
                             }
                         }
-                        if (found == true)
+                        if (found != true)
                         {
-                            Intent intent = new Intent(log_in.this, customer.class);
-                            startActivity(intent);
-                        }
-                        else
                             throw new Exception("ERROR - The ID you entered doesn't match any existing customer");
+                        }
                             break;
                     case "manager":
                         Manager manager = backendFactory.getManger();
@@ -76,6 +76,7 @@ public class log_in extends AppCompatActivity {
                         if (found == true)
                         {
                             Intent intent = new Intent(log_in.this, manger.class);
+                            intent.putExtra(ConstValue.MANAGER_KEY, manager);//add the specific manager
                             startActivity(intent);
                         }
                         else
@@ -87,15 +88,16 @@ public class log_in extends AppCompatActivity {
                             if (s.getNumID()==id)
                             {
                                 found = true;
+                                Intent intent = new Intent(log_in.this, supplier.class);
+                                intent.putExtra(ConstValue.SUPPLIER_KEY, s);//add the specific supplier
+                                startActivity(intent);
+
                             }
                         }
-                        if (found == true)
+                        if (found != true)
                         {
-                            Intent intent = new Intent(log_in.this, supplier.class);
-                            startActivity(intent);
-                        }
-                        else
                             throw new Exception("ERROR - The ID you entered doesn't match any existing supplier");
+                        }
                         break;
                 }}
                 catch (Exception e)

@@ -26,21 +26,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
-        try {
-            Backend backendFactory = model.datasource.BackendFactory.getInstance();
-            backendFactory.addCustomer(new Customer(123456789, "", "", "", "", Gender.FEMALE,
-                    new Date(1994, 8, 5), "", Status.DIVORCED), Privilege.MANAGER);
-        }
-        catch (Exception e)
-        {
-            Toast.makeText(MainActivity.this, "Failed to sign in:\n" + e.getMessage().toString(), Toast.LENGTH_LONG).show();
 
-        }
         //log in button
-        Button logButton = (Button)findViewById(R.id.logInButton);
+        Button logButton = (Button)findViewById(R.id.logInButton_main);
         logButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -50,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //sign in button
-        Button signButton = (Button)findViewById(R.id.singInButton);
+        Button signButton = (Button)findViewById(R.id.singInButton_main);
         signButton.setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void  onClick(View v){

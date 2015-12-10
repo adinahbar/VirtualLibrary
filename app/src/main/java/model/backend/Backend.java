@@ -16,6 +16,7 @@ public interface Backend {
     public void removeBook (long bookID, long userID ,Privilege privilege) throws Exception;
     public void updateBook (Book book , long userID ,Privilege privilege) throws Exception;
     public ArrayList<Book> getBookList() throws Exception;
+    public Book findBookByID(long id) throws Exception;
 
     /**
      * supplier functions
@@ -24,6 +25,7 @@ public interface Backend {
     public void removeSupplier (long supplierID, Privilege privilege) throws Exception;
     public void updateSupplier (Supplier supplier , Privilege privilege) throws Exception;
     public ArrayList<Supplier> getSupplierList() throws Exception;
+    public Supplier findSupplierByID(long id) throws Exception;
 
     /**
      * order functions
@@ -32,6 +34,7 @@ public interface Backend {
     public void removeOrder (long orderID, Privilege privilege) throws Exception;
     public void updateOrder (Order order, Privilege privilege) throws Exception;
     public ArrayList<Order> getOrderList() throws Exception;
+    public Order findOrderByID(long orderID)throws Exception;
 
     /**
      * customer functions
@@ -40,6 +43,7 @@ public interface Backend {
     public void removeCustomer (long customerID,Privilege privilege) throws Exception;
     public void updateCustomer (Customer customer,Privilege privilege) throws Exception;
     public ArrayList<Customer> getCustomerList(Privilege privilege) throws Exception;
+    public Customer findCustomerByID(long customerID)throws Exception;
 
     /**
      * opinion functions
@@ -48,7 +52,7 @@ public interface Backend {
     public void removeOpinion (long opinionID, Privilege privilege) throws Exception;
     public void updateOpinion (Opinion opinion, Privilege privilege) throws Exception;
     public ArrayList<Opinion> getOpinionListOfBook(long bookID) throws Exception;
-
+    public Opinion findOpinionByID (long opinionID)throws Exception;
     /**
      * manger functions
      */

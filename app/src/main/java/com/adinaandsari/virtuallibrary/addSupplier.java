@@ -33,10 +33,10 @@ public class addSupplier extends AppCompatActivity {
     {
         switch (view.getId())
         {
-            case R.id.male_checkBox_add_customer:
+            case R.id.male_checkBox_add_supplier:
                 female.setChecked(false);
                 break;
-            case R.id.female_checkBox_add_customer:
+            case R.id.female_checkBox_add_supplier:
                 male.setChecked(false);
         }
     }

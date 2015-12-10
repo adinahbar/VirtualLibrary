@@ -8,56 +8,53 @@
     android:weightSum="4"
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+    android:layout_height="fill_parent"
+    android:background="#e7e4e4">
 
     <LinearLayout
         android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        android:layout_weight="3"
+        android:layout_width="fill_parent"
+        android:layout_height="427dp"
         android:weightSum="3"
-        android:id="@+id/upper">
+        android:id="@+id/upper_main">
 
         <ImageView
             android:layout_width="fill_parent"
             android:layout_height="match_parent"
             android:id="@+id/logoImage"
-            android:layout_weight="1" />
+            android:src="@drawable/book_press_icon"/>
 
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center|right">
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/sing_in"
-                android:id="@+id/singInButton"
-                android:layout_weight="3" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/log_in"
-                android:id="@+id/logInButton"
-                android:layout_weight="2"
-                android:nestedScrollingEnabled="false" />
-        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
         android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="120dp"
-        android:layout_weight="1"
-        android:id="@+id/lower"
-        android:weightSum="1">
+        android:id="@+id/lower_main"
+        android:weightSum="1"
+        android:layout_gravity="center">
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sing_in"
+            android:id="@+id/singInButton_main"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textColor="#056bb9"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/log_in"
+            android:id="@+id/logInButton_main"
+            android:nestedScrollingEnabled="false"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textColor="#056bb9"/>
     </LinearLayout>
+
 </LinearLayout>

@@ -6,6 +6,9 @@ import java.io.Serializable;
  * Created by adina_000 on 05-Nov-15.
  */
 public class Manager extends Person implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
     /**
      * attributes
      */

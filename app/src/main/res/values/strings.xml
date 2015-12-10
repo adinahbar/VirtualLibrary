@@ -72,4 +72,10 @@
     <string name="author">author</string>
     <string name="rate">rate</string>
     <string name="title_activity_book_list_by_category">BookListByCategory</string>
+    <string name="title_activity_update_customer">UpdateCustomer</string>
+    <string name="Update_button">Update</string>
+    <string name="num_credit_card"># Credit Card:</string>
+    <string name="enter_num_credit_card">enter # credit card</string>
+    <string name="vip_text_view">VIP:</string>
+    <string name="yes">yes</string>
 </resources>
