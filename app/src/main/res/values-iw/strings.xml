@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ספריה וירטואלית</string>
+    <string name="action_settings">הגדרות</string>
+    <string name="log_in">התחבר</string>
+</resources>

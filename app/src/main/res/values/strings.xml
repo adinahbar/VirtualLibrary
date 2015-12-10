@@ -1,0 +1,75 @@
+<resources>
+    <string name="app_name">VirtualLibrary</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_order">OrderActivity</string>
+    <string name="log_in">log in</string>
+    <string name="category_book_list_name">This is book category</string>
+    <string name="title_activity_log_in_activity">log_in_activity</string>
+    <string name="title_activity_log_in">log_in</string>
+    <string name="id_text_view">ID :</string>
+    <string name="privilege_text_view">Privilege :</string>
+    <string-array name="privilege_array">
+        <item>customer</item>
+        <item>manager</item>
+        <item>supplier</item>
+    </string-array>
+    <string name="title_activity_customer">customer</string>
+    <string name="title_activity_manger">manger</string>
+    <string name="title_activity_supplier">supplier</string>
+    <string name="sing_in">sign in</string>
+    <string name="title_activity_add_customer">add_customer</string>
+    <string name="name_text_view">Name:</string>
+    <string name="address_text_view">Address:</string>
+    <string name="gender_text_view">Gender:</string>
+    <string name="phon_number_text_view">Phone number:</string>
+    <string name="email_text_view">Email address:</string>
+    <string name="birthday_text_view">BirthDay date:</string>
+    <string name="status_text_view">Status:</string>
+    <string name="add_button">Add</string>
+    <string name="female">Female</string>
+    <string name="male">male</string>
+    <string name="enter_id">enter your id</string>
+    <string name="enter_name">enter your name</string>
+    <string name="enter_phone_number">enter your phone number</string>
+    <string name="enter_address">enter your address</string>
+    <string name="enter_email">enter your email address</string>
+    <string name="enter_birthday">enter your birthday (MM/DD/YYYY)</string>
+    <string name="shop_by_category_text_customer">Shop by category</string>
+    <string-array name="status_array">
+        <item>single</item>
+        <item>married</item>
+        <item>divorced</item>
+        <item>widower</item>
+    </string-array>
+    <string-array name="supplier_type_array">
+        <item>publishing</item>
+        <item>shop</item>
+        <item>writer</item>
+    </string-array>
+    <string-array name="category_array">
+        <item>Arts</item>
+        <item>Biographies</item>
+        <item>Children</item>
+        <item>Cook</item>
+        <item>Fantasy</item>
+        <item>History</item>
+        <item>Literature</item>
+        <item>Memoirs</item>
+        <item>Mystery</item>
+        <item>Photography</item>
+        <item>Romance</item>
+        <item>ScienceFiction</item>
+        <item>Suspense</item>
+        <item>YoungAdult</item>
+    </string-array>
+    <string name="title_activity_add_supplier">addSupplier</string>
+    <string name="customer_service_num_add_supplier">Customer service phone</string>
+    <string name="enter_customer_service_num">enter customer service phone num</string>
+    <string name="reservation_num_text_view_add_supplier">Reservation phone num:</string>
+    <string name="enter_reservation_num">enter reservation phone num</string>
+    <string name="type_text_view_add_supplier">Type:</string>
+    <string name="title">title</string>
+    <string name="author">author</string>
+    <string name="rate">rate</string>
+    <string name="title_activity_book_list_by_category">BookListByCategory</string>
+</resources>
