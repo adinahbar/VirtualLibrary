@@ -10,6 +10,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -37,19 +38,43 @@ public class customer extends AppCompatActivity {
         spinner = (Spinner) findViewById(R.id.category_spinner_customer);
         categoryList = getResources().getStringArray(R.array.category_array);
         dataAdapter = new ArrayAdapter<String>(this,R.layout.support_simple_spinner_dropdown_item,categoryList);
+
+        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
         spinner.setAdapter(dataAdapter);
 
-        spinner.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Spinner spinnerCategory = (Spinner)findViewById(R.id.category_spinner_customer);
-                String category = spinnerCategory.getSelectedItem().toString();
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+              @Override
+              public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                  Spinner spinnerCategory = (Spinner) findViewById(R.id.category_spinner_customer);
 
-                Intent intent = new Intent(customer.this, BookListByCategory.class);
-                intent.putExtra("Category from customer activity", category);
-                startActivity(intent);
-            }
-        });
+                  String category = spinnerCategory.getSelectedItem().toString();
+                  //String category = spinner.getSelectedItem().toString();
+                  // String category =  getResources().getStringArray(R.array.category_array)[spinner.getSelectedItemPosition()];
+
+                  Intent intent = new Intent(customer.this, BookListByCategory.class);
+                  intent.putExtra("Category from customer activity", category);
+                  startActivity(intent);
+              }
+
+              @Override
+              public void onNothingSelected(AdapterView<?> parent) {
+
+              }
+          }
+        );
+
+//        spinner.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Spinner spinnerCategory = (Spinner) findViewById(R.id.category_spinner_customer);
+//                String category = spinnerCategory.getSelectedItem().toString();
+//
+//                Intent intent = new Intent(customer.this, BookListByCategory.class);
+//                intent.putExtra("Category from customer activity", category);
+//                startActivity(intent);
+//            }
+//        });
     }
 
 }
