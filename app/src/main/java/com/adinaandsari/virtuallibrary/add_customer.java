@@ -66,7 +66,7 @@ public class add_customer extends AppCompatActivity {
                     name = editTextOfName.getText().toString();
                     EditText editTextOfAddress = (EditText) findViewById(R.id.address_edit_text_add_customer);
                     address = editTextOfAddress.getText().toString();
-                    EditText editTextOfPhoneNumber = (EditText) findViewById(R.id.phon_number_edit_text_add_customer);
+                    EditText editTextOfPhoneNumber = (EditText) findViewById(R.id.phone_number_edit_text_add_customer);
                     phoneNumber = editTextOfPhoneNumber.getText().toString();
                     if (phoneNumber.contains("[a-zA-Z]+") != false)
                         throw new Exception("ERROR: Phone number must contain only digits");
@@ -83,7 +83,7 @@ public class add_customer extends AppCompatActivity {
                         gender = Gender.FEMALE;
                     } else
                         throw new Exception("ERROR: you didn't checked any checkbox ");
-                    EditText editTextOfBirthday = (EditText) findViewById(R.id.birthdat_edit_text_add_customer);
+                    EditText editTextOfBirthday = (EditText) findViewById(R.id.birthday_edit_text_add_customer);
                     DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
                     birthday = df.parse(editTextOfBirthday.getText().toString());
                     Calendar now = Calendar.getInstance();

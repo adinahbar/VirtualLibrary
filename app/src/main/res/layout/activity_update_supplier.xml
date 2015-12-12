@@ -4,8 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" android:fitsSystemWindows="true"
-    tools:context="com.adinaandsari.virtuallibrary.UpdateCustomer">
+    tools:context="com.adinaandsari.virtuallibrary.UpdateSupplier">
 
-    <include layout="@layout/content_update_customer" />
+    <include layout="@layout/content_update_supplier" />
 
 </android.support.design.widget.CoordinatorLayout>

@@ -4,7 +4,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/book_press_icon"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
@@ -56,6 +56,11 @@
         <activity
             android:name=".UpdateCustomer"
             android:label="@string/title_activity_update_customer"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".UpdateSupplier"
+            android:label="@string/title_activity_update_supplier"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
     </application>

@@ -22,7 +22,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/id_text_view"
-            android:id="@+id/id_text_view" />
+            android:id="@+id/id_text_view_add_customer" />
 
         <EditText
             android:layout_width="wrap_content"
@@ -45,7 +45,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/name_text_view"
-            android:id="@+id/name_text_view" />
+            android:id="@+id/name_text_view_add_customer" />
 
         <EditText
             android:layout_width="wrap_content"
@@ -66,7 +66,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/address_text_view"
-            android:id="@+id/address_text_view" />
+            android:id="@+id/address_text_view_add_customer" />
 
         <EditText
             android:layout_width="wrap_content"
@@ -88,7 +88,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/gender_text_view"
-            android:id="@+id/gender_text_view" />
+            android:id="@+id/gender_text_view_add_customer" />
 
         <CheckBox
             android:layout_width="wrap_content"
@@ -114,14 +114,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/phon_number_text_view"
-            android:id="@+id/phon_number_text_view" />
+            android:id="@+id/phone_number_text_view_add_customer" />
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="phone"
             android:ems="10"
-            android:id="@+id/phon_number_edit_text_add_customer"
+            android:id="@+id/phone_number_edit_text_add_customer"
             android:layout_weight="1"
             android:hint="@string/enter_phone_number" />
     </LinearLayout>
@@ -135,7 +135,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/email_text_view"
-            android:id="@+id/email_text_view" />
+            android:id="@+id/email_text_view_add_customer" />
 
         <EditText
             android:layout_width="wrap_content"
@@ -156,14 +156,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/birthday_text_view"
-            android:id="@+id/birthday_text_view" />
+            android:id="@+id/birthday_text_view_add_customer" />
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="date"
             android:ems="10"
-            android:id="@+id/birthdat_edit_text_add_customer"
+            android:id="@+id/birthday_edit_text_add_customer"
             android:layout_weight="1"
             android:hint="@string/enter_birthday" />
     </LinearLayout>
@@ -177,7 +177,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/status_text_view"
-            android:id="@+id/status_text_view" />
+            android:id="@+id/status_text_view_add_customer" />
 
         <Spinner
             android:layout_width="wrap_content"

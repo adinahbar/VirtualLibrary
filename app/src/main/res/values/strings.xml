@@ -78,4 +78,5 @@
     <string name="enter_num_credit_card">enter # credit card</string>
     <string name="vip_text_view">VIP:</string>
     <string name="yes">yes</string>
+    <string name="title_activity_update_supplier">UpdateSupplier</string>
 </resources>

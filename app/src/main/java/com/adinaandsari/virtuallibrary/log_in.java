@@ -2,16 +2,12 @@ package com.adinaandsari.virtuallibrary;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -22,7 +18,6 @@ import entities.Manager;
 import entities.Privilege;
 import entities.Supplier;
 import model.backend.Backend;
-import model.datasource.BackendFactory;
 
 public class log_in extends AppCompatActivity {
 
@@ -35,7 +30,7 @@ public class log_in extends AppCompatActivity {
 
         Spinner spinner = (Spinner) findViewById(R.id.privilege_spinner_log_in);
         String[] privilegeList = getResources().getStringArray(R.array.privilege_array);
-        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,R.layout.support_simple_spinner_dropdown_item,privilegeList);
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<>(this,R.layout.support_simple_spinner_dropdown_item,privilegeList);
         spinner.setAdapter(dataAdapter);
 
         //log in button
@@ -64,7 +59,7 @@ public class log_in extends AppCompatActivity {
                                 startActivity(intent);
                             }
                         }
-                        if (found != true)
+                        if (!found)
                         {
                             throw new Exception("ERROR - The ID you entered doesn't match any existing customer");
                         }
@@ -73,7 +68,7 @@ public class log_in extends AppCompatActivity {
                         Manager manager = backendFactory.getManger();
                         if (manager.getNumID() == id)
                             found = true;
-                        if (found == true)
+                        if (found)
                         {
                             Intent intent = new Intent(log_in.this, manger.class);
                             intent.putExtra(ConstValue.MANAGER_KEY, manager);//add the specific manager
@@ -94,7 +89,7 @@ public class log_in extends AppCompatActivity {
 
                             }
                         }
-                        if (found != true)
+                        if (!found)
                         {
                             throw new Exception("ERROR - The ID you entered doesn't match any existing supplier");
                         }
@@ -103,7 +98,7 @@ public class log_in extends AppCompatActivity {
                 catch (Exception e)
                 {
                     //print the exception in a toast view
-                    Toast.makeText(log_in.this,"Failed to log in:\n" + e.getMessage().toString(),Toast.LENGTH_LONG).show();
+                    Toast.makeText(log_in.this,"Failed to log in:\n" + e.getMessage(),Toast.LENGTH_LONG).show();
                 }
             }
         });
