@@ -67,6 +67,7 @@ public interface Backend {
     public ArrayList<Book> bookListSortedByCategory (Category category)throws Exception;
     public ArrayList<Book> bookListSortedByAuthors (String authorsName)throws Exception;
     public ArrayList<Book> bookListSortedByDate (Date start, Date end)throws Exception;
+    public ArrayList<String> authorList () throws Exception;
     public int getNumOfCopiesOfBook (long bookID)throws Exception;
     public double finishOrder (ArrayList<Order> orders)throws Exception;
     public void addMoreCopiesToBook (long bookID , int numOfCopies, long supplierID , Privilege privilege)throws Exception;

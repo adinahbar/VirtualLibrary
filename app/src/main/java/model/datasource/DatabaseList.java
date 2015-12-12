@@ -618,13 +618,40 @@ public class DatabaseList implements Backend {
     @Override
     public ArrayList<Book> bookListSortedByAuthors(String authorsName)throws Exception {
         if (books.size() == 0) //if the list is empty
-            throw new Exception("ERROR: the list is empty");
+            throw new Exception("ERROR: the book list is empty");
         //to prevent aliasing - create a new list and add new books that are equal to the books in the list book
         ArrayList<Book> listToReturn = new ArrayList<>();
         for (Book bookItem : books)
             if (bookItem.getAuthor() == authorsName) //check that the books belong to a specific author
                 listToReturn.add(new Book(bookItem));
         return listToReturn;
+    }
+    /**
+     * function to get the list of authors
+     * @return authorsName of all the books
+     * @throws Exception
+     */
+    @Override
+    public ArrayList<String> authorList () throws Exception{
+        if (books.size() == 0)//if the list is empty
+            throw new Exception("ERROR: the book list is empty");
+        ArrayList<String> authorsName = new ArrayList<>();
+        String name;
+        boolean exist = false;
+        for (Book book : books)
+        {
+            name = book.getBookName();
+            for (String n : authorsName) //check that it is not exist in the list all ready
+            {
+                if (n == name) {
+                    exist = true;
+                    break;
+                }
+            }
+            if (exist == false)
+                authorsName.add(name);
+        }
+        return authorsName;
     }
     /**
      * function to get a books' list by a dates of publisher
@@ -788,6 +815,8 @@ public class DatabaseList implements Backend {
                     orderOfBook.numOfOrder++;
             }
         }
+        if (orderOfBookArrayList.size() == 0) //if there are no order
+            throw new Exception("there are no order in the store");
         //get the max ordered book and return it
         int max =0;
         long mostOrderBookID = orderOfBookArrayList.get(1).orderBookID;

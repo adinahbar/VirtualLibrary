@@ -6,6 +6,9 @@ import java.util.Date;
  * Created by A&S on 05/11/2015.
  */
 public class Book implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
     /**
      * attributes
      */

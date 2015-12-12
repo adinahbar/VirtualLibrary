@@ -10,47 +10,107 @@
     tools:showIn="@layout/activity_customer"
     tools:context="com.adinaandsari.virtuallibrary.customer"
     android:orientation="vertical"
+    android:background="#ffffff"
     android:weightSum="9">
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1">
+        android:layout_weight="6">
+
+        <ImageView
+            android:layout_width="236dp"
+            android:layout_height="240dp"
+            android:id="@+id/book_of_the_store_image"
+            android:src="@drawable/best_seller"
+            android:layout_gravity="center" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:id="@+id/book_of_the_store_textView"
+                android:layout_gravity="center" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shop_it_text"
+                android:id="@+id/shop_book_of_the_store_button_customer" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2">
 
         <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id="@+id/shop_by_category_textView_customer"
             android:layout_gravity="center"
             android:gravity="center_vertical|center_horizontal"
             android:text="@string/shop_by_category_text_customer"
             android:layout_weight="1" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="8"
-        android:id="@+id/bottom_customer_LinearLayout"
-        android:weightSum="3">
 
         <Spinner
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:id="@+id/category_spinner_customer"
             android:clickable="true"
-            android:layout_weight="2" />
+            android:layout_gravity="center" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2">
 
-        <FrameLayout
-            android:orientation="vertical"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/shop_by_author_textView_customer"
+            android:layout_gravity="center"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/shop_by_author_text_view_customer"
+            android:layout_weight="1" />
+
+        <Spinner
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:background="#11223344"
-            android:id="@+id/fragment_container_customer"
-            android:layout_weight="1"></FrameLayout>
+            android:id="@+id/author_spinner_customer"
+            android:clickable="true" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/shop_by_supplier_textView_customer"
+            android:layout_gravity="center"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/shop_by_supplier_text_view_customer"
+            android:singleLine="false" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/shop_by_supplier_spinner_customer"
+            android:clickable="true"
+            android:layout_gravity="center" />
     </LinearLayout>
 
 </LinearLayout>

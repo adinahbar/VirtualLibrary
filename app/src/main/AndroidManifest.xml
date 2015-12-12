@@ -63,6 +63,26 @@
             android:label="@string/title_activity_update_supplier"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
+        <activity
+            android:name=".addBook"
+            android:label="@string/title_activity_add_book"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".addOrder"
+            android:label="@string/title_activity_add_order"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".BookListByAuthor"
+            android:label="@string/title_activity_book_list_by_author"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".BookListBySupplier"
+            android:label="@string/title_activity_book_list_by_supplier"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
     </application>
 
 </manifest>

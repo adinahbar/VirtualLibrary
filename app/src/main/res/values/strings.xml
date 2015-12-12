@@ -34,7 +34,7 @@
     <string name="enter_address">enter your address</string>
     <string name="enter_email">enter your email address</string>
     <string name="enter_birthday">enter your birthday (MM/DD/YYYY)</string>
-    <string name="shop_by_category_text_customer">Shop by category</string>
+    <string name="shop_by_category_text_customer">Shop by category:</string>
     <string-array name="status_array">
         <item>single</item>
         <item>married</item>
@@ -79,4 +79,11 @@
     <string name="vip_text_view">VIP:</string>
     <string name="yes">yes</string>
     <string name="title_activity_update_supplier">UpdateSupplier</string>
+    <string name="title_activity_add_book">addBook</string>
+    <string name="title_activity_add_order">addOrder</string>
+    <string name="title_activity_book_list_by_author">BookListByAuthor</string>
+    <string name="title_activity_book_list_by_supplier">BookListBySupplier</string>
+    <string name="shop_it_text">Shop it</string>
+    <string name="shop_by_author_text_view_customer">Shop by books authors:</string>
+    <string name="shop_by_supplier_text_view_customer">Shop by books supplier:</string>
 </resources>
