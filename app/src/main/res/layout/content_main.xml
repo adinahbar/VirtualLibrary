@@ -15,8 +15,7 @@
         android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="427dp"
-        android:weightSum="3"
-        android:id="@+id/upper_main">
+        android:weightSum="3">
 
         <ImageView
             android:layout_width="fill_parent"
@@ -33,7 +32,6 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:id="@+id/lower_main"
         android:weightSum="1"
         android:layout_gravity="center">
 

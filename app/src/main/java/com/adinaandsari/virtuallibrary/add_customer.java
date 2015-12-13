@@ -1,6 +1,5 @@
 package com.adinaandsari.virtuallibrary;
 
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -28,7 +27,6 @@ import model.backend.Backend;
 public class add_customer extends AppCompatActivity {
 
     private CheckBox male,female;
-    private ProgressDialog progressDialog;
     private long id;
     private String name ,address , phoneNumber , email;
     private Status status;
@@ -130,8 +128,9 @@ public class add_customer extends AppCompatActivity {
 */
                     //try to add a new customer
                     Backend backendFactory = model.datasource.BackendFactory.getInstance();
-                    backendFactory.addCustomer(new Customer(id, name, address, phoneNumber, email, gender,
-                            birthday, "", status), Privilege.MANAGER);
+                    Customer customerToAdd = new Customer(id, name, address, phoneNumber, email, gender,
+                            birthday, "", status);
+                    backendFactory.addCustomer(customerToAdd, Privilege.MANAGER);
                     Toast.makeText(add_customer.this, "Sign in has been successful!\nA mail will be sent to you shortly", Toast.LENGTH_LONG).show();
 
                     //sent an email
@@ -149,6 +148,7 @@ public class add_customer extends AppCompatActivity {
                     //go to the next activity
                     //go to the customer activity
                     Intent intent = new Intent(add_customer.this, customer.class);
+                    intent.putExtra(ConstValue.CUSTOMER_KEY, customerToAdd);//add the specific customer
                     startActivity(intent);
 
                 }

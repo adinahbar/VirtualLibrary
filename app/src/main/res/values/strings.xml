@@ -86,4 +86,5 @@
     <string name="shop_it_text">Shop it</string>
     <string name="shop_by_author_text_view_customer">Shop by books authors:</string>
     <string name="shop_by_supplier_text_view_customer">Shop by books supplier:</string>
+    <string name="title_activity_add_manager">AddManager</string>
 </resources>
