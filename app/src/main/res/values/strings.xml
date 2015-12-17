@@ -118,4 +118,5 @@
     <string name="years_in_company_text">Years in company: </string>
     <string name="enter_years_in_company">enter num of years</string>
     <string name="welcome_to_press_book">welcome to press book!!</string>
+    <string name="title_activity_update_manager">UpdateManager</string>
 </resources>

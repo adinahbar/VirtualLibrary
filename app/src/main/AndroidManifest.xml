@@ -93,6 +93,11 @@
             android:label="@string/title_activity_update_book"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
+        <activity
+            android:name=".UpdateManager"
+            android:label="@string/title_activity_update_manager"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
     </application>
 
 </manifest>

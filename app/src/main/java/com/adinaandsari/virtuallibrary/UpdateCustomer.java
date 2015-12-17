@@ -147,7 +147,7 @@ public class UpdateCustomer extends AppCompatActivity {
 
     }
 
-    //function to enter the values of the selected supplier by its ID
+    //function to enter the values of the selected customer by its ID
     void enterDetail()
     {
         try {
