@@ -136,6 +136,7 @@ public class UpdateCustomer extends AppCompatActivity {
 
                     //go back to the activity
                     Intent intent = new Intent(UpdateCustomer.this, manger.class);
+                    intent.putExtra(ConstValue.MANAGER_KEY, user);
                     startActivity(intent);
 
                 } catch (Exception e) {

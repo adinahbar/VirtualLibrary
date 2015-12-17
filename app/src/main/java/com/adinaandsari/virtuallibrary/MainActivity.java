@@ -8,6 +8,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 
+import entities.Gender;
+import entities.Manager;
+import entities.Privilege;
+import model.backend.Backend;
+import model.datasource.BackendFactory;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
 
         //log in button
         Button logButton = (Button)findViewById(R.id.logInButton_main);

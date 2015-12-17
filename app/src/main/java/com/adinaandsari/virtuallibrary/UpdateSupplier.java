@@ -127,6 +127,7 @@ public class UpdateSupplier extends AppCompatActivity {
 
                     //go back to the activity
                     Intent intent = new Intent(UpdateSupplier.this, manger.class);
+                    intent.putExtra(ConstValue.MANAGER_KEY, user);
                     startActivity(intent);
 
                 } catch (Exception e) {
