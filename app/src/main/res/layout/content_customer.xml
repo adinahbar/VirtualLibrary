@@ -66,7 +66,6 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:id="@+id/category_spinner_customer"
-            android:clickable="true"
             android:layout_gravity="center" />
     </LinearLayout>
     <LinearLayout
@@ -87,8 +86,7 @@
         <Spinner
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/author_spinner_customer"
-            android:clickable="true" />
+            android:id="@+id/author_spinner_customer" />
     </LinearLayout>
     <LinearLayout
         android:orientation="vertical"
@@ -109,7 +107,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/shop_by_supplier_spinner_customer"
-            android:clickable="true"
             android:layout_gravity="center" />
     </LinearLayout>
 

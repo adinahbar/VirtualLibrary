@@ -62,6 +62,17 @@
         <item>Suspense</item>
         <item>YoungAdult</item>
     </string-array>
+    <string-array name="language_array">
+        <item>English</item>
+        <item>German</item>
+        <item>French</item>
+        <item>Spanish</item>
+        <item>Italian</item>
+        <item>Russian</item>
+        <item>Chinese</item>
+        <item>Hebrew</item>
+        <item>Zulu</item>
+    </string-array>
     <string name="title_activity_add_supplier">addSupplier</string>
     <string name="customer_service_num_add_supplier">Customer service phone</string>
     <string name="enter_customer_service_num">enter customer service phone num</string>
@@ -87,4 +98,16 @@
     <string name="shop_by_author_text_view_customer">Shop by books authors:</string>
     <string name="shop_by_supplier_text_view_customer">Shop by books supplier:</string>
     <string name="title_activity_add_manager">AddManager</string>
+    <string name="enter_book_name">enter book\'s name</string>
+    <string name="author_book_text">Author: </string>
+    <string name="enter_author_book">enter book\'s author</string>
+    <string name="publisher_book_text">Publisher: </string>
+    <string name="enter_book_publisher">enter book\'s publisher</string>
+    <string name="summary_book_text">Summary: </string>
+    <string name="enter_book_summary_text">enter book\'s summary</string>
+    <string name="published_date_text">Published Date: </string>
+    <string name="enter_published_date">enter date (MM/DD/YYYY)</string>
+    <string name="language_book_text">Language: </string>
+    <string name="category_book_text">Category: </string>
+    <string name="title_activity_update_book">UpdateBook</string>
 </resources>

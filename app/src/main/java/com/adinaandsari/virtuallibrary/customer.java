@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
@@ -106,32 +107,46 @@ public class customer extends AppCompatActivity {
         supplierSpinner.setAdapter(supplierDataAdapter);
 
 
-        categorySpinner.setOnClickListener(new View.OnClickListener() {
+        categorySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onClick(View v) {
-                String category = categorySpinner.getSelectedItem().toString();
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                Spinner spinner = (Spinner) findViewById(R.id.category_spinner_customer);
+                String category = spinner.getSelectedItem().toString();
                 Intent intent = new Intent(customer.this, BookListByCategory.class);
                 intent.putExtra("Category from customer activity", category);
                 startActivity(intent);
             }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
         });
 
-        authorSpinner.setOnClickListener(new View.OnClickListener() {
+        authorSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onClick(View v) {
-                String name = authorSpinner.getSelectedItem().toString();
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                Spinner spinner = (Spinner) findViewById(R.id.author_spinner_customer);
+                String name = spinner.getSelectedItem().toString();
                 Intent intent = new Intent(customer.this, BookListByAuthor.class);
                 intent.putExtra("authorName", name);
                 startActivity(intent);
             }
-        });
-        supplierSpinner.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                String name = supplierSpinner.getSelectedItem().toString();
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+        supplierSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                Spinner spinner = (Spinner) findViewById(R.id.shop_by_supplier_spinner_customer);
+                String name = spinner.getSelectedItem().toString();
                 Intent intent = new Intent(customer.this, BookListBySupplier.class);
                 intent.putExtra("supplierName", name);
                 startActivity(intent);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
             }
         });
     }

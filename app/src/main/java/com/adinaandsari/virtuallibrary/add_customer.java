@@ -3,8 +3,8 @@ package com.adinaandsari.virtuallibrary;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -37,8 +37,6 @@ public class add_customer extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_customer);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
         male = (CheckBox) findViewById(R.id.male_checkBox_add_customer);
         female = (CheckBox) findViewById(R.id.female_checkBox_add_customer);
@@ -74,7 +72,17 @@ public class add_customer extends AppCompatActivity {
                         throw new Exception("ERROR: your email address is wrong");
                     }
                     Spinner spinnerStatus = (Spinner) findViewById(R.id.status_spinner_add_customer);
-                    status = Status.valueOf(spinnerStatus.getSelectedItem().toString().toUpperCase(Locale.ENGLISH));
+                    spinnerStatus.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                            Spinner spinner = (Spinner) findViewById(R.id.status_spinner_add_customer);
+                            status = Status.valueOf(spinner.getSelectedItem().toString().toUpperCase(Locale.ENGLISH));
+                        }
+
+                        @Override
+                        public void onNothingSelected(AdapterView<?> parent) {
+                        }
+                    });
                     if (((CheckBox) findViewById(R.id.male_checkBox_add_customer)).isChecked()) {
                         gender = Gender.MALE;
                     } else if (((CheckBox) findViewById(R.id.female_checkBox_add_customer)).isChecked()) {
@@ -87,45 +95,10 @@ public class add_customer extends AppCompatActivity {
                     Calendar now = Calendar.getInstance();
                     Calendar birthdayDate = Calendar.getInstance();
                     birthdayDate.setTime(birthday);
-
                     if (birthdayDate.before(now) != true) {
                         throw new Exception("ERROR: your birthday isn't correct");
                     }
 
- /*                   myAsyncTask task = new myAsyncTask(add_customer.this, progressDialog,
-                            new myFunc() {
-                                @Override
-                                public void run() throws Exception {
-                                    //try to add a new customer
-                                    Backend backendFactory = model.datasource.BackendFactory.getInstance();
-                                    backendFactory.addCustomer(new Customer(id, name, address, phoneNumber, email, gender,
-                                            birthday, "", status), Privilege.MANAGER);
-                                    Toast.makeText(add_customer.this, "Sign in has been successful!\nA mail will be sent to you shortly", Toast.LENGTH_LONG).show();
-
-                                    //sent an email
-                                    Intent i = new Intent(Intent.ACTION_SEND);
-                                    i.setType("message/rfc822");
-                                    i.putExtra(Intent.EXTRA_EMAIL, email);
-                                    i.putExtra(Intent.EXTRA_SUBJECT, "Success sign in to our virtual book store");
-                                    i.putExtra(Intent.EXTRA_TEXT, "Congratulation! you entered our costumer club.\nyou're welcome to start shopping :)");
-                                    try {
-                                        startActivity(Intent.createChooser(i, "Send mail..."));
-                                    } catch (android.content.ActivityNotFoundException ex) {
-                                        Toast.makeText(add_customer.this, "There are no email clients installed\nThe mail won't be sent to you", Toast.LENGTH_LONG).show();
-                                    }
-                                }
-                            },
-                            new myFunc() {
-                                @Override
-                                public void run() throws Exception {
-                                    //go to the customer activity
-                                    Intent intent = new Intent(add_customer.this, customer.class);
-                                    startActivity(intent);
-                                }
-                            }
-                            , "Loading");
-                    task.execute();
-*/
                     //try to add a new customer
                     Backend backendFactory = model.datasource.BackendFactory.getInstance();
                     Customer customerToAdd = new Customer(id, name, address, phoneNumber, email, gender,
@@ -134,6 +107,7 @@ public class add_customer extends AppCompatActivity {
                     Toast.makeText(add_customer.this, "Sign in has been successful!\nA mail will be sent to you shortly", Toast.LENGTH_LONG).show();
 
                     //sent an email
+                    /*
                     Intent i = new Intent(Intent.ACTION_SEND);
                     i.setType("message/rfc822");
                     i.putExtra(Intent.EXTRA_EMAIL, email);
@@ -144,7 +118,7 @@ public class add_customer extends AppCompatActivity {
                     } catch (android.content.ActivityNotFoundException ex) {
                         Toast.makeText(add_customer.this, "There are no email clients installed\nThe mail won't be sent to you", Toast.LENGTH_LONG).show();
                     }
-
+                    */
                     //go to the next activity
                     //go to the customer activity
                     Intent intent = new Intent(add_customer.this, customer.class);

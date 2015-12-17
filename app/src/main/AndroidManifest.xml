@@ -88,6 +88,11 @@
             android:label="@string/title_activity_add_manager"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
+        <activity
+            android:name=".UpdateBook"
+            android:label="@string/title_activity_update_book"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
     </application>
 
 </manifest>
