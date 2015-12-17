@@ -65,7 +65,7 @@ public class UpdateCustomer extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_customer);
-
+        //function to find views by id
         findView();
 
         //spinner for the status of the customer

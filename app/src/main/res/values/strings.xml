@@ -113,6 +113,8 @@
     <string name="num_of_copies_text">Number of copies: </string>
     <string name="enter_num_of_copies">enter number of copies</string>
     <string name="book_price_text_view">Price: </string>
-    <string name="enter_book_price">enter book'\s price</string>
-    <string name="enter_supplier_id">enter book'\s supplier ID</string>
+    <string name="enter_book_price">enter book\'s price</string>
+    <string name="enter_supplier_id">enter book\'s supplier ID</string>
+    <string name="years_in_company_text">Years in company: </string>
+    <string name="enter_years_in_company">enter num of years</string>
 </resources>

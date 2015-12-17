@@ -21,10 +21,7 @@ import java.util.Locale;
 
 import entities.Book;
 import entities.Category;
-import entities.Customer;
-import entities.Gender;
 import entities.Language;
-import entities.Status;
 import entities.Supplier;
 import model.backend.Backend;
 import model.datasource.BackendFactory;
