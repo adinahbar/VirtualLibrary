@@ -672,6 +672,26 @@ public class DatabaseList implements Backend {
         return listToReturn;
     }
     /**
+     * function to get all the book of a specific supplier
+     * @param supplierID
+     * @return book list
+     * @throws Exception
+     */
+    public ArrayList<Book> bookListBySupplier (long supplierID)throws Exception{
+        if (books.size() == 0) //if the list is empty
+            throw new Exception("ERROR: the list is empty");
+        //to prevent aliasing - create a new list and add new books that are equal to the books in the list book
+        ArrayList<Book> books = new ArrayList<>();
+        for (SupplierAndBook supplierAndBook : supplierAndBooks)
+        {
+            if (supplierAndBook.getSupplierID() == supplierID)
+            {
+                books.add(new Book(findBookByID(supplierAndBook.getBookID())));
+            }
+        }
+        return books;
+    }
+    /**
      * function to update the rate of a book
      * @param book to update
      * @throws Exception
@@ -690,7 +710,7 @@ public class DatabaseList implements Backend {
                 rateSumOfBook += op.getRate();
             }
         }
-        book.setRateAVR(rateSumOfBook/count);
+        book.setRateAVR(rateSumOfBook / count);
         //update the book
         updateBook(book,getManger().getNumID() , Privilege.MANAGER);
     }
@@ -759,8 +779,63 @@ public class DatabaseList implements Backend {
             throw new Exception("ERROR:there is no supplier that provides this book");
 
     }
+
     /**
-     * func to uptate a customer if he is VIP and to give him 10% discount
+     * function to get the num of book copies of a specific supplier
+     * @param bookID
+     * @param supplierID
+     * @return num of copies
+     * @throws Exception
+     */
+    public int getNumOfBookCopiesForSupplier (long bookID ,long supplierID )throws Exception
+    {
+        for (SupplierAndBook supplierAndBookItem : supplierAndBooks)//loop to go on supplier and book
+            if (supplierAndBookItem.getBookID() ==bookID &&supplierAndBookItem.getSupplierID()==supplierID) //check that this supplier and book exists
+            {
+                return supplierAndBookItem.getNumOfCopies();
+            }
+        //the supplier and book does not exist
+        throw new Exception("ERROR:there is no supplier that provides this book");
+    }
+
+    /**
+     *  function to get the book price of a specific supplier
+     * @param bookID
+     * @param supplierID
+     * @return boo price
+     * @throws Exception
+     */
+    public double getPriceOfBookForSupplier (long bookID ,long supplierID )throws Exception
+    {
+        for (SupplierAndBook supplierAndBookItem : supplierAndBooks)//loop to go on supplier and book
+            if (supplierAndBookItem.getBookID() ==bookID &&supplierAndBookItem.getSupplierID()==supplierID) //check that this supplier and book exists
+            {
+                return supplierAndBookItem.getPrice();
+            }
+        //the supplier and book does not exist
+        throw new Exception("ERROR:there is no supplier that provides this book");
+    }
+
+    /**
+     * function to set the book price of a specific supplier
+     * @param bookID
+     * @param supplierID
+     * @param price
+     * @throws Exception
+     */
+    public void setPriceOfBookForSupplier (long bookID ,long supplierID ,double price)throws Exception
+    {
+        for (SupplierAndBook supplierAndBookItem : supplierAndBooks)//loop to go on supplier and book
+            if (supplierAndBookItem.getBookID() ==bookID &&supplierAndBookItem.getSupplierID()==supplierID) //check that this supplier and book exists
+            {
+               supplierAndBookItem.setPrice(price);
+                break;
+            }
+        //the supplier and book does not exist
+        throw new Exception("ERROR:there is no supplier that provides this book");
+    }
+    /**
+     * func to update a customer if he is VIP and to give him 10% discount
      * @param order
      * @throws Exception
      */

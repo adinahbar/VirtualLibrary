@@ -47,31 +47,31 @@
         <item>writer</item>
     </string-array>
     <string-array name="category_array">
-        <item>Arts</item>
-        <item>Biographies</item>
-        <item>Children</item>
-        <item>Cook</item>
-        <item>Fantasy</item>
-        <item>History</item>
-        <item>Literature</item>
-        <item>Memoirs</item>
-        <item>Mystery</item>
-        <item>Photography</item>
-        <item>Romance</item>
-        <item>ScienceFiction</item>
-        <item>Suspense</item>
-        <item>YoungAdult</item>
+        <item>arts</item>
+        <item>biographies</item>
+        <item>children</item>
+        <item>cook</item>
+        <item>fantasy</item>
+        <item>history</item>
+        <item>literature</item>
+        <item>memoirs</item>
+        <item>mystery</item>
+        <item>photography</item>
+        <item>romance</item>
+        <item>scienceFiction</item>
+        <item>suspense</item>
+        <item>youngAdult</item>
     </string-array>
     <string-array name="language_array">
-        <item>English</item>
-        <item>German</item>
-        <item>French</item>
-        <item>Spanish</item>
-        <item>Italian</item>
-        <item>Russian</item>
-        <item>Chinese</item>
-        <item>Hebrew</item>
-        <item>Zulu</item>
+        <item>english</item>
+        <item>german</item>
+        <item>french</item>
+        <item>spanish</item>
+        <item>italian</item>
+        <item>russian</item>
+        <item>chinese</item>
+        <item>hebrew</item>
+        <item>zulu</item>
     </string-array>
     <string name="title_activity_add_supplier">addSupplier</string>
     <string name="customer_service_num_add_supplier">Customer service phone</string>
@@ -110,4 +110,9 @@
     <string name="language_book_text">Language: </string>
     <string name="category_book_text">Category: </string>
     <string name="title_activity_update_book">UpdateBook</string>
+    <string name="num_of_copies_text">Number of copies: </string>
+    <string name="enter_num_of_copies">enter number of copies</string>
+    <string name="book_price_text_view">Price: </string>
+    <string name="enter_book_price">enter book'\s price</string>
+    <string name="enter_supplier_id">enter book'\s supplier ID</string>
 </resources>

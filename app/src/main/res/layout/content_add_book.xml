@@ -10,7 +10,7 @@
     tools:showIn="@layout/activity_add_book"
     tools:context="com.adinaandsari.virtuallibrary.addBook"
     android:orientation="vertical"
-    android:weightSum="8">
+    android:weightSum="10">
 
     <LinearLayout
         android:orientation="horizontal"
@@ -150,6 +150,46 @@
             android:layout_height="wrap_content"
             android:id="@+id/category_spinner_add_book"
             android:layout_weight="1" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/num_of_copies_text"
+            android:id="@+id/numOfCopies_text_view_add_book" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/numOfCopies_edit_text_add_book"
+            android:inputType="number"
+            android:layout_weight="1"
+            android:hint="@string/enter_num_of_copies" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/book_price_text_view"
+            android:id="@+id/book_price_text_view_add_book" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/book_price_edit_text_add_book"
+            android:layout_weight="1"
+            android:inputType="numberDecimal"
+            android:hint="@string/enter_book_price" />
     </LinearLayout>
 
     <LinearLayout
